@@ -1,2 +1,5 @@
-# unofficial_mal_api
-in progress
+# MyAnimeList Scrapper [ Unofficial ]
+> Built by manbonpan for Discord MAL scrapping
+
+- In progress
+

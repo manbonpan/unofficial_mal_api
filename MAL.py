@@ -1,20 +1,17 @@
 import socket
 import urllib.request
 import re
-import time
-initial=time.time()
-a=input('input anime name')
-ques=a.replace(' ','%20')
-with urllib.request.urlopen('https://myanimelist.net/search/all?q='+ques) as response:
-   html = response.read()
-final=time.time()
 
+#Will be removed when converted to object
+query = input('Enter Anime Name :').replace(' ','%20')
+
+
+# Scrapping
+with urllib.request.urlopen('https://myanimelist.net/search/all?q='+query) as response:
+   html = response.read()
 obj=html.decode()
 
-
-
-        
-        
+      
 def title():
     x= 'class="hoverinfo_trigger fw-b fl-l'
     y = re.finditer(x,obj)
@@ -54,7 +51,7 @@ def first_res():
             
            sec=sec+l[counter]
     return sec
-def gettinfo(url):
+def gettinfo():
     y=first_res()
     with urllib.request.urlopen(y) as response:
         html = response.read()
@@ -158,9 +155,7 @@ def gettinfo(url):
            if n[counter] == '<':
                break
            back+=n[counter]
-    
-    
-    
-
     return back
-print(final-initial,gettinfo())
+
+
+print(gettinfo())
