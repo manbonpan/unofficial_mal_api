@@ -1,5 +1,4 @@
 # MyAnimeList Scrapper [ Unofficial ]
-> Built by manbonpan and pacchu for Discord MAL scrapping
-
+MAL scrapper stopped working on this for now it works but improvements in future ;)
 - In progress
 
